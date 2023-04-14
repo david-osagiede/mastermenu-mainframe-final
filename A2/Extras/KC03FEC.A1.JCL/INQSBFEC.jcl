@@ -1,0 +1,33 @@
+//INQSBFEC JOB
+//*********************************************************************
+//*   THIS IS THE BMS MAP DEFINITION
+//*   WHICH IS USED TO ASSEMBLE PHYSICAL AND SYMBOLIC MAPS
+//*********************************************************************
+//*
+//*   TO CUSTOMIZE THIS SCRIPT YOU WILL NEED TO CHANGE THE FOLLOWING:
+//*
+//*
+//*       DSCTLIB - SET THIS TO THE NAME OF THE DATASET WHICH CONTAINS
+//*                 YOUR CICS/COBOL APPLICATION CODE.
+//*
+//*       MAPNAME - SET THIS TO THE MAP SET NAME PROVIDED BY YOUR
+//*                 INSTRUCTOR
+//*
+//*       BMSLIB  - SET THIS TO THE NAME OF THE DATASET WHICH CONTAINS
+//*                 YOUR BMS CODE TO BE INTERPRETED
+//*
+//*********************************************************************
+//*
+//*
+//CICSPROC JCLLIB ORDER=(TSOECCC.CICSTS12.PROCLIB)
+//MAPSET EXEC DFHMAPS,OUTC='*',RMODE=24,
+//*
+//  BMSLIB='KC03FEC.A1.BMS',
+//  MAPNAME='INQSFEC',
+//  DSCTLIB='KC03FEC.A1.COBOL',
+//*
+//*** DO NOT CHANGE MAPLIB OR INDEX!!!
+//  MAPLIB='TSOECCC.CICSTS12.STUDENT.LOADLIB',
+//  INDEX='DFH550.CICS'
+//COPY.SYSUT1 DD DSN=&BMSLIB(&MAPNAME),DISP=SHR
+//ASMDSECT.SYSPUNCH DD DSN=&DSCTLIB(&MAPNAME)

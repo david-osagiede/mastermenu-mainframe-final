@@ -1,0 +1,23 @@
+       01  SUMMFECO.
+           02  FILLER PIC X(12).
+           02  FILLER PICTURE X(2).
+           02  TRANIDA    PICTURE X.
+           02  TRANIDO  PIC X(4).
+           02  FILLER PICTURE X(2).
+           02  COUNTA    PICTURE X.
+           02  COUNTO  PIC ZZ,ZZ9.
+           02  FILLER PICTURE X(2).
+           02  FIRSTA    PICTURE X.
+           02  FIRSTO  PIC 999999.
+           02  FILLER PICTURE X(2).
+           02  LASTA    PICTURE X.
+           02  LASTO  PIC 999999.
+           02  FILLER PICTURE X(2).
+           02  TOTALA    PICTURE X.
+           02  TOTALO  PIC $$,$$$,$$9.99.
+           02  FILLER PICTURE X(2).
+           02  MESSAGEA    PICTURE X.
+           02  MESSAGEO  PIC X(79).
+           02  FILLER PICTURE X(2).
+           02  DUMMYA    PICTURE X.
+           02  DUMMYO  PIC X(1).
